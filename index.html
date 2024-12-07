@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/output.css">
+    <link rel="stylesheet" href="./src/css/custom.css">
+    <title>DRUM</title>
+</head>
+<body class="bg-gray-800 flex justify-center items-center h-screen">
+    <div 
+    class="
+      bg-yellow-500
+      w-[90%]
+      lg:w-[38%]
+      md:w-[80%]
+      p-5
+      flex
+      gap-5
+      flex-col
+      lg:flex-row
+      md:flex-row
+    ">
+    <!-- for keys -->
+        <div
+        class="
+          grid
+          grid-cols-3
+          gap-2
+          w-full
+          md:w-1/2
+          lg:w-1/2
+          ">
+            <div
+             data-key="q" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">Q</div>
+            <div
+             data-key="w" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">W</div>
+            <div
+             data-key="e" class="keys bg-gray-800 font-bold text-lg  text-white text-center p-4 rounded-lg shadow-lg">E</div>
+            <div
+             data-key="a" class="keys bg-gray-800 font-bold text-lg  text-white text-center p-4 rounded-lg shadow-lg">A</div>
+            <div
+             data-key="s" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">S</div>
+            <div
+             data-key="d" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">D</div>
+            <div
+             data-key="z" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">Z</div>
+            <div
+             data-key="x" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">X</div>
+            <div
+             data-key="c" class="keys bg-gray-800 font-bold text-lg text-white text-center p-4 rounded-lg shadow-lg">C</div>
+        </div>
+
+        <div class="lg:w-1/2 md:w-1/2 flex flex-col gap-5">
+            <!-- for button -->
+            <div class="flex justify-between w-full pt-6">
+                <div class="">
+                    <label class="text-black font-bold">Power</label>
+                    <div class="bg-gray-800 w-[60px] p-[3px] rounded-full mt-2 cursor-pointer" data-state="on" id="power">
+                        <div class="w-6 h-6 rounded-full bg-orange-500 toggle-on"  id="power-slider"></div>
+                    </div>
+                </div>
+                <div class="">
+                    <label class="text-black font-bold" >Switch set</label>
+                    <div class="bg-gray-800 w-[60px] p-[3px] rounded-full mt-2 cursor-pointer" id="switch-bank">
+                        <div class="w-6 h-6 rounded-full bg-orange-500 toggle-on" id="switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- for key screen -->
+            <div class="bg-gray-800 w-full h-9 font-bold text-white justify-center flex items-center" id="screen-key"></div>
+            <!-- for volume -->
+             <div class="w-full">
+                <label class="text-black justify-center flex font-bold volume-label">Volume</label>
+                <input id="volume" type="range" class="w-full" min="0" max="100" value="50">
+             </div>
+        </div>
+
+    </div>
+    <script type="module" src="./src/js/index.js"></script>
+</body>
+</html>

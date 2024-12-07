@@ -1,0 +1,15 @@
+.toggle-on{
+    transform: translateX(123%);
+}
+.toggle-off{
+    transform: none;
+}
+*{
+    user-select: none;
+}
+.disabled{
+    background-color: gray;
+}
+.disabled-text{
+    color: gray;
+}
